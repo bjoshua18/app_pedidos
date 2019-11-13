@@ -8,6 +8,8 @@
 </head>
 <body>
 	<?php
+		session_start();
+		$ajaxReq = false;
 		require_once './controllers/viewController.php';
 		$vc = new viewController();
 		$view = $vc->getViewController();
