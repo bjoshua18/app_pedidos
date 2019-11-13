@@ -1,0 +1,1 @@
+<h1>Esta es la vista del carrito</h1>

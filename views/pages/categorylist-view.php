@@ -1,0 +1,1 @@
+<h1>Esta es la lista de categorías</h1>
