@@ -64,6 +64,14 @@ body, html{
 	border-bottom: 2px solid #F7F7F7;
 	padding: 0;
 }
+.container-404 {
+	background-image: url("../assets/img/sideBar.png");
+	color: #fff;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 /*============ LogIn*/
 .login-container{
 	height: 100%;

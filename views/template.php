@@ -8,15 +8,15 @@
 </head>
 <body>
 	<?php
-		session_start();
 		$ajaxReq = false;
 		require_once './controllers/viewController.php';
 		$vc = new viewController();
 		$view = $vc->getViewController();
 
-		if($view == 'welcome' || $view == 'login' || $view == 'register'):
+		if($view == 'welcome' || $view == 'login' || $view == 'register' || $view == '404'):
 			require_once "./views/pages/$view-view.php";
 		else:
+			session_start();
 	?>
 <!-- SideBar -->
 <?php include 'views/modules/sidebar.php' ?>
