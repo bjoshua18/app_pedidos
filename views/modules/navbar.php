@@ -4,8 +4,8 @@
 			<a href="#!" class="btn-menu-dashboard"><i class="zmdi zmdi-more-vert"></i></a>
 		</li>
 		<li>
-			<a href="search.html" class="btn-search">
-				<i class="zmdi zmdi-search"></i>
+			<a href="<?= SERVERURL ?>shoppingcart/" class="btn-shopping-cart">
+				<i class="zmdi zmdi-shopping-cart"></i>
 			</a>
 		</li>
 	</ul>

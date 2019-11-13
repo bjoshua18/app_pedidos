@@ -7,6 +7,15 @@
 	<link rel="stylesheet" href="<?= SERVERURL ?>views/css/main.css">
 </head>
 <body>
+	<?php
+		require_once './controllers/viewController.php';
+		$vc = new viewController();
+		$view = $vc->getViewController();
+
+		if($view == 'welcome' || $view == 'login' || $view == 'register'):
+			require_once "./views/pages/$view-view.php";
+		else:
+	?>
 <!-- SideBar -->
 <?php include 'views/modules/sidebar.php' ?>
 
@@ -16,9 +25,9 @@
 	<?php include 'views/modules/navbar.php' ?>
 
 	<!-- Content page -->
-
+	<?php require_once $view ?>
 </section>
-
+<?php endif ?>
 <!--====== Scripts -->
 <?php include 'views/modules/scripts.php' ?>
 </body>

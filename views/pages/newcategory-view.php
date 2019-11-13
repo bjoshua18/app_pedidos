@@ -1,0 +1,1 @@
+<h1>Formulario para agregar una categoría</h1>

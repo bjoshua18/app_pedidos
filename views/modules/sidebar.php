@@ -13,12 +13,12 @@
 			</figure>
 			<ul class="full-box list-unstyled text-center">
 				<li>
-					<a href="my-data.html" title="Mis datos">
+					<a href="<?= SERVERURL ?>data/" title="Mis datos">
 						<i class="zmdi zmdi-account-circle"></i>
 					</a>
 				</li>
 				<li>
-					<a href="my-account.html" title="Mi cuenta">
+					<a href="<?= SERVERURL ?>account/" title="Mi cuenta">
 						<i class="zmdi zmdi-settings"></i>
 					</a>
 				</li>
@@ -32,7 +32,7 @@
 		<!-- SideBar Menu -->
 		<ul class="list-unstyled full-box dashboard-sideBar-Menu">
 			<li>
-				<a href="home.html">
+				<a href="<?= SERVERURL ?>home/">
 					<i class="zmdi zmdi-view-dashboard zmdi-hc-fw"></i> Dashboard
 				</a>
 			</li>
@@ -42,16 +42,13 @@
 				</a>
 				<ul class="list-unstyled full-box">
 					<li>
-						<a href="company.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i> Empresa</a>
+						<a href="<?= SERVERURL ?>newproduct/"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo producto</a>
 					</li>
 					<li>
-						<a href="category.html"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
+						<a href="<?= SERVERURL ?>newcategory/"><i class="zmdi zmdi-file-plus"></i> Nueva categoría</a>
 					</li>
 					<li>
 						<a href="provider.html"><i class="zmdi zmdi-truck zmdi-hc-fw"></i> Proveedores</a>
-					</li>
-					<li>
-						<a href="book.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i> Nuevo libro</a>
 					</li>
 				</ul>
 			</li>
@@ -61,15 +58,18 @@
 				</a>
 				<ul class="list-unstyled full-box">
 					<li>
-						<a href="admin.html"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
+						<a href="<?= SERVERURL ?>adminlist/"><i class="zmdi zmdi-account zmdi-hc-fw"></i> Administradores</a>
 					</li>
 					<li>
-						<a href="client.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
+						<a href="<?= SERVERURL ?>clientlist/"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Clientes</a>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="catalog.html">
+				<a href="<?= SERVERURL ?>categorylist/"><i class="zmdi zmdi-labels zmdi-hc-fw"></i> Categorías</a>
+			</li>
+			<li>
+				<a href="<?= SERVERURL ?>catalog/">
 					<i class="zmdi zmdi-book-image zmdi-hc-fw"></i> Catalogo
 				</a>
 			</li>
