@@ -3,9 +3,7 @@
 class viewModel {
 	protected function getViewModel($view)
 	{
-		$acceptedViews = ['account', 'adminlist', 'catalog', 'category', 'categorylist', 'clientlist', 'data', 'home',
-		'newcategory',
-		'newproduct', 'product', 'shoppingcart'];
+		$acceptedViews = ['account', 'adminlist', 'catalog', 'category', 'categorylist', 'clientlist', 'data', 'home', 'newadmin', 'newcategory', 'newproduct', 'product', 'searchadmin', 'shoppingcart'];
 		if (in_array($view, $acceptedViews)) {
 			if (is_file("./views/pages/$view-view.php"))
 				$route = "./views/pages/$view-view.php";
