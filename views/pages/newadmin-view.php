@@ -15,7 +15,7 @@
 			<h3 class="panel-title"><i class="zmdi zmdi-plus"></i> &nbsp; NUEVO ADMINISTRADOR</h3>
 		</div>
 		<div class="panel-body">
-			<form action="" data-form="save" method="POST" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
+			<form action="<?= SERVERURL ?>ajax/adminAjax.php" data-form="save" method="POST" class="FormularioAjax" autocomplete="off" enctype="multipart/form-data">
 				<fieldset>
 					<legend><i class="zmdi zmdi-account-box"></i> &nbsp; Información personal</legend>
 					<div class="container-fluid">
@@ -41,13 +41,13 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group label-floating">
 									<label class="control-label">Teléfono *</label>
-									<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" maxlength="15">
+									<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" required="" maxlength="15">
 								</div>
 							</div>
 							<div class="col-xs-12">
 								<div class="form-group label-floating">
 									<label class="control-label">Dirección *</label>
-									<textarea name="direccion-reg" class="form-control" rows="2" maxlength="100"></textarea>
+									<textarea name="direccion-reg" class="form-control" rows="2" maxlength="100" required=""></textarea>
 								</div>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group label-floating">
 									<label class="control-label">E-mail *</label>
-									<input class="form-control" type="email" name="email-reg" maxlength="50">
+									<input class="form-control" type="email" name="email-reg" maxlength="50" required="">
 								</div>
 							</div>
 							<div class="col-xs-12">
