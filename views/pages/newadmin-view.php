@@ -29,25 +29,25 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group label-floating">
 									<label class="control-label">Nombres *</label>
-									<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="nombre-reg" required="" maxlength="30">
+									<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="name-reg" required="" maxlength="30">
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group label-floating">
 									<label class="control-label">Apellidos *</label>
-									<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="apellido-reg" required="" maxlength="30">
+									<input pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{1,30}" class="form-control" type="text" name="lastname-reg" required="" maxlength="30">
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group label-floating">
 									<label class="control-label">Teléfono *</label>
-									<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono-reg" required="" maxlength="15">
+									<input pattern="[0-9+]{1,15}" class="form-control" type="text" name="phone-reg" required="" maxlength="15">
 								</div>
 							</div>
 							<div class="col-xs-12">
 								<div class="form-group label-floating">
 									<label class="control-label">Dirección *</label>
-									<textarea name="direccion-reg" class="form-control" rows="2" maxlength="100" required=""></textarea>
+									<textarea name="address-reg" class="form-control" rows="2" maxlength="100" required=""></textarea>
 								</div>
 							</div>
 						</div>
@@ -61,7 +61,7 @@
 							<div class="col-xs-12">
 								<div class="form-group label-floating">
 									<label class="control-label">Nombre de usuario *</label>
-									<input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}" class="form-control" type="text" name="usuario-reg" required="" maxlength="15">
+									<input pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ]{1,15}" class="form-control" type="text" name="user-reg" required="" maxlength="15">
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
@@ -87,13 +87,13 @@
 									<label class="control-label">Genero</label>
 									<div class="radio radio-primary">
 										<label>
-											<input type="radio" name="optionsGenero" id="optionsRadios1" value="Masculino" checked="">
+											<input type="radio" name="optionsGender" id="optionsRadios1" value="Masculino" checked="">
 											<i class="zmdi zmdi-male-alt"></i> &nbsp; Masculino
 										</label>
 									</div>
 									<div class="radio radio-primary">
 										<label>
-											<input type="radio" name="optionsGenero" id="optionsRadios2" value="Femenino">
+											<input type="radio" name="optionsGender" id="optionsRadios2" value="Femenino">
 											<i class="zmdi zmdi-female"></i> &nbsp; Femenino
 										</label>
 									</div>
