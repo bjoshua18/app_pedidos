@@ -14,6 +14,32 @@ class mainModel
 		return $resp;
 	}
 
+	protected function add_account($data) {
+		$sql = self::connect()->prepare(
+			'INSERT INTO 
+			accounts(AccountCode, AccountLvl, AccountUser, AccountPassword, AccountEmail, AccountState, AccountType, AccountGender, AccountImage) 
+			VALUES(:Code, :Lvl, :User, :Password, :Email, :State, :Type, :Gender, :Image)'
+		);
+		$sql->bindParam(':Code', $data['Code']);
+		$sql->bindParam(':Lvl', $data['Lvl']);
+		$sql->bindParam(':User', $data['User']);
+		$sql->bindParam(':Password', $data['Password']);
+		$sql->bindParam(':Email', $data['Email']);
+		$sql->bindParam(':State', $data['State']);
+		$sql->bindParam(':Type', $data['Type']);
+		$sql->bindParam(':Gender', $data['Gender']);
+		$sql->bindParam(':Image', $data['Image']);
+		$sql->execute();
+		return $sql;
+	}
+
+	protected function delete_account($code) {
+		$sql = self::connect()->prepare('DELETE FROM accounts WHERE AccountCode=:Code');
+		$sql->bindParam(':Code',$code);
+		$sql->execute();
+		return $sql;
+	}
+
 	// AUX FUNCTIONS
 	public function encryption($string) {
 		$output = false;
