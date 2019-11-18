@@ -3,5 +3,7 @@ $ajaxReq ? require_once '../models/adminModel.php' : require_once './models/admi
 
 class adminController extends adminModel
 {
+	public function add_admin_controller() {
 
+	}
 }
