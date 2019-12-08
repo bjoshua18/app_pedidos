@@ -20,15 +20,8 @@ class mainModel
 			accounts(AccountCode, AccountLvl, AccountUser, AccountPassword, AccountEmail, AccountState, AccountType, AccountGender, AccountImage) 
 			VALUES(:Code, :Lvl, :User, :Password, :Email, :State, :Type, :Gender, :Image)'
 		);
-		$sql->bindParam(':Code', $data['Code']);
-		$sql->bindParam(':Lvl', $data['Lvl']);
-		$sql->bindParam(':User', $data['User']);
-		$sql->bindParam(':Password', $data['Password']);
-		$sql->bindParam(':Email', $data['Email']);
-		$sql->bindParam(':State', $data['State']);
-		$sql->bindParam(':Type', $data['Type']);
-		$sql->bindParam(':Gender', $data['Gender']);
-		$sql->bindParam(':Image', $data['Image']);
+		$params = [':Code', ':Lvl', ':User', ':Password', ':Email', ':State', ':Type', ':Gender', ':Image'];
+		$this->bindMultiplesParams($sql, $params, $data);
 		$sql->execute();
 		return $sql;
 	}
@@ -119,5 +112,18 @@ class mainModel
 			";
 		}
 		return $alert;
+	}
+
+	protected function bindMultiplesParams(&$sql, $params, $vars) {
+		$i = 0;
+		foreach ($vars as $key => $var)
+			$sql->bindParam($params[$i++], $vars[$key]);
+	}
+
+	protected function is_data_empty($data) {
+		foreach ($data as $datum)
+			if(empty($datum))
+				return true;
+		return false;
 	}
 }

@@ -10,12 +10,8 @@ class adminModel extends mainModel
 			admins(AdminDNI, AdminName, AdminLastname, AdminPhone, AdminAddress, AccountCode) 
 			VALUES(:DNI, :Name, :Lastname, :Phone, :Address, :Code)"
 		);
-		$sql->bindParam(':DNI', $data['DNI']);
-		$sql->bindParam(':Name', $data['Name']);
-		$sql->bindParam(':Lastname', $data['Lastname']);
-		$sql->bindParam(':Phone', $data['Phone']);
-		$sql->bindParam(':Address', $data['Address']);
-		$sql->bindParam(':Code', $data['Code']);
+		$params = [':DNI', ':Name', ':Lastname', ':Phone', ':Address', ':Code'];
+		mainModel::bindMultiplesParams($sql, $params, $data);
 		$sql->execute();
 		return $sql;
 	}
