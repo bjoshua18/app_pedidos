@@ -11,4 +11,8 @@ class loginModel extends mainModel
 		$sql->execute();
 		return $sql;
 	}
+
+	protected function logout_model($data) {
+		return ($data['user'] != '' && $data['token_user'] == $data['token_btn']) ? 'true' : 'false';
+	}
 }

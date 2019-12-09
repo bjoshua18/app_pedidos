@@ -5,6 +5,3 @@
 <script src="<?= SERVERURL ?>views/js/ripples.min.js"></script>
 <script src="<?= SERVERURL ?>views/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="<?= SERVERURL ?>views/js/main.js"></script>
-<script>
-	$.material.init();
-</script>

@@ -19,6 +19,11 @@
 			require_once "./views/pages/$view-view.php";
 		else:
 			session_start(['name' => 'AP']);
+			require_once './controllers/loginController.php';
+			$login = new loginController();
+
+			if(!isset($_SESSION['token']) || !isset($_SESSION['user']))
+				$login->force_logout_controller();
 	?>
 <!-- SideBar -->
 <?php include 'views/modules/sidebar.php' ?>
@@ -31,6 +36,13 @@
 	<!-- Content page -->
 	<?php require_once $view ?>
 </section>
-<?php endif ?>
+<?php
+		// El script de logout esta aqui para evitar ataques externos
+		include 'views/modules/logoutScript.php';
+		endif;
+	?>
+<script>
+	$.material.init();
+</script>
 </body>
 </html>

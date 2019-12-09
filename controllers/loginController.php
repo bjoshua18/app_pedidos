@@ -40,4 +40,20 @@ class loginController extends loginModel
 			return mainModel::sweet_alert($alert);
 		}
 	}
+
+	public function logout_controller() {
+		session_start(['name' => 'AP']);
+		$token_btn = mainModel::decryption($_GET['Token']);
+		$data = [
+			'user' => $_SESSION['user'],
+			'token_user' => $_SESSION['token'],
+			'token_btn' => $token_btn,
+		];
+		return loginModel::logout_model($data);
+	}
+
+	public function force_logout_controller() {
+		session_destroy();
+		return header('Location:'.SERVERURL.'login/');
+	}
 }
